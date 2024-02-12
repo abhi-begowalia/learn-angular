@@ -1,0 +1,9 @@
+<h3>Encapsulation in Angular</h3>
+<p>Encapsulation in angular to the restriction of css code. It providing the ability to keep the particular part css only applies on that part and not affect to the other component or any other part of code. Usually there are three types of encapsulation in angular which is:</p>
+<ul>
+    <li><b>Emulated:</b> No Shadow DOM. Style encapsulation. (default) It usually means that this component css will not applies on their parent or child or used in the this component only.</li>
+    <li><b>Native:</b> Shadow DOM Style encapsulation. This option is used on that time when we want to apply the this component css to its child component but not apply on its parent component. Native option created a shadow dom for its child where all the parent css is defined.</li>
+    <li><b>None:</b> No Shadow DOM. No Style encapsulation. It means simply that this component css will be applied on its parent and child component both.</li>
+</ul>
+<em>This is a Italic element that is also exist in its child component.</em>
+<app-child></app-child>
