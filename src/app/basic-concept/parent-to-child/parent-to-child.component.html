@@ -1,0 +1,12 @@
+<h3>Send parent Component data to child Component.</h3>
+<p>To send the parent Component data to child Component we are using the input property in the child Component and send the parent Component data through a reference variable and also we need to fire a keyup event to update the reference varibale data. for example: In the below I'm creating a input field and receive print that input data to child component.</p>
+
+<label>Enter User Name: </label>
+<input type="text" #Username (keyup)="0" /> 
+<!-- Anything that is starts with the # sign in the input box is called a template reference varibale which hold the value of that input field. foe example: #hobbies is called a template reference variable. -->
+
+<!-- Brackets () are used to define a event. for example in the input box we are firing a keyup event  -->
+
+<app-child [Userdata]="Username.value" ></app-child>
+
+<!-- square brackets[]  are used for property binding. In the square brackets we are defining or giving the name of varibable that will we receive on the Child Component. -->

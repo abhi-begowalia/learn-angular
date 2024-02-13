@@ -1,0 +1,9 @@
+<h3>Send Data Child Component to Parent Component</h3>
+<p>For Send the data Child Component to Parent Component we are using the output property in the Component Decorator. This output property is defined in the Child Component with the EventEmitter.</p>
+<p>Hobbies: {{childData}}</p>
+
+<app-child (childData)="getChildData($event)" ></app-child>
+
+ <!-- Below is another way to do this this same work with less code where we can directly add the value to the childData variable.  -->
+
+<!-- <app-child (childData)="childData=$event" ></app-child> --> 

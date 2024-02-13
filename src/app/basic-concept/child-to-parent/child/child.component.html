@@ -1,0 +1,6 @@
+<p>Below is child Component data.</p>
+
+<label>Enter your Hobbies: </label>
+<input type="text" #hobbies (keyup)="getHobbies(hobbies.value)" />
+
+<!-- Anything that is starts with the # sign in the input box is called a template reference varibale which hold the value of that input field. foe example: #hobbies is called a template reference variable. -->
