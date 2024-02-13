@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { StructuralComponent } from './structural/structural.component';
 
 @Component({
   selector: 'app-directive',
   standalone: true,
-  imports: [],
+  imports: [StructuralComponent],
   templateUrl: './directive.component.html',
   styleUrl: './directive.component.css'
 })

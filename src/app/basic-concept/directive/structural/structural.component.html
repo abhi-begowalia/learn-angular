@@ -1,0 +1,33 @@
+<p><b>Structural Directive: </b> Structural directive are a key part of Angular. Everyone should be familiar with it. They are responsible for manipulating DOM through adding, removing or changing the elements. Even if you have never written a structural directive yourself, you have probably been using &#64;ngIf and &#64;ngFor in your template pretty often.</p>
+<ul>
+    <li>NgIf</li>
+    <li>NgFor</li>
+    <li>NgSwitch</li>
+</ul>
+<b>Below is example of If Else conditions</b>
+@if(isUserLogged){
+    <p>Hello Abhisheak, You are Logged in.</p>
+}@else {
+    <p>You are not logged out.</p>
+}
+
+@if(isUserLogged) {<button (click)="logout()">Logout</button>}
+@else{<button (click)="login()">Login</button>}
+<br>
+<br>
+<b>Below is example of Switch conditions</b>
+<br><br>
+<label>Name:</label>
+<input type="text" #uName (keyup)="0" />
+
+@switch (uName.value) {
+    @case('Abhi'){
+        <p>Hello Abhi</p>
+    }
+    @case('Gurdeep'){
+        <p>Hello Gurdeep</p>
+    }
+    @default {
+        <p>No data found.</p>
+    }
+}
