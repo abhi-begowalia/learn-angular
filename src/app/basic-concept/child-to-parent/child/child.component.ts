@@ -11,6 +11,7 @@ import { Component, EventEmitter } from '@angular/core';
 export class ChildComponent {
 
   childData = new EventEmitter();
+  
   getHobbies(val:any){
     this.childData.emit(val);
   }
