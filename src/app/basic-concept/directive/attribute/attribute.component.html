@@ -1,9 +1,29 @@
 <h3>Attribute Directive in Angular</h3>
 <p>Thee attributes directive changes the apperance or behavior of a DOM elements. These directive look live regular HTML attributes in template. The ngModel directive which is used for two-day is an example of an attributes directive. Some of other attribute directive are listed below:</p>
 <ul>
-    <li>NgStyle: used for dynamic style can be set by using NgStyle.</li>
-    <li>NgClass: used for adding and removing css classes dynamically.</li>
+    <li>Style: used for dynamic style can be set by using NgStyle.</li>
+    <li>Class: used for adding and removing css classes dynamically.</li>
 </ul>
 
-<p>Below is Example of NgStyle Directive.</p>
-<!-- <div [ngStyle]="background-color:red">Hello World</div> -->
+<p>Below is Example of Style Directive.</p>
+<div [style]="{'background-color':dStyle.bg,'color':dStyle.color,'font-size':dStyle.fontSize+'px'}">Hello World</div>
+
+<br>
+<label>Enter Color Name: </label>
+<input type="text" #colorName (keyup)="UpdateDStyle('color',colorName)"/>
+
+<br>
+<br>
+<label>Enter Background Name: </label>
+<input type="text" #bgColor (keyup)="UpdateDStyle('bg',bgColor)"/>
+
+<br>
+<br>
+<label>Enter Font size: </label>
+<input type="number" #fontSize (keyup)="UpdateDStyle('fontSize',fontSize)"/>
+
+
+<p>Below is Example of Class Directive.</p>
+@for(navItem of navItems; track navItems){
+    <span class="nav" #navItemRef (click)="activateNavItem(navItemRef)">{{ navItem }}</span>
+}

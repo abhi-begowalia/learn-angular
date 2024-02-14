@@ -1,0 +1,31 @@
+<h3>Data Binding</h3>
+<p>Data Binding means to bind the view (HTML Content) with Controller's (Component) field. That is whenever we display dynamic data on a view (HTML) for Component, data binding is used.</p>
+<p>Data Binding basically means intracting with data. So, we can say that the interaction between templates and business logic is called data binding. There are basically two types of Data binding in Angular</p>
+<ul>
+    <li>One way Binding
+        <ul>
+            <li>Component to View
+                <ul>
+                    <li>Interpolation Binding</li>
+                    <li>Property Binding</li>
+                    <li>Style Binding</li>
+                    <li>Class Binding </li>
+                    <li>Attribute Binding</li>
+                </ul>
+            </li>
+            <li>View to Component
+                <ul>
+                    <li>Event Binding</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Two way Binding</li>
+</ul>
+
+<h3>Interpolation Binding</h3>
+<p>Interpolation Binding is a technique that allows the user to bind a value to a UI element. Interpolation Binds the data in One way Which is Component to View. This means that when the value of the field bound is changed, It update the page as well.</p>
+<p>{{counter}}</p>
+
+<button (click)="IncreaseCounter()">Increase</button> 
+<button (click)="decreaseCounter()">Decrease</button>

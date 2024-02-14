@@ -36,7 +36,7 @@
 
     
     @for(data of dummyData; track data.id; let i = $index,e = $even,od = $odd,f=$first,l=$last,c = $count){
-        <tr> 
+        <tr [style]="{'background-color': e ? '#fff6c9': ''}"> 
             @if(f){
                 <td>First {{ od ? "Even" : 'Odd' }}</td>  <!-- first index is 0 and even and odd is starting counting from the 0 thats why I have used its opposite condition. -->
             }@else if (l) {
