@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { LoopsComponent } from './loops/loops.component';
 
 @Component({
   selector: 'app-structural',
   standalone: true,
-  imports: [],
+  imports: [LoopsComponent],
   templateUrl: './structural.component.html',
   styleUrl: './structural.component.css',
   preserveWhitespaces:true

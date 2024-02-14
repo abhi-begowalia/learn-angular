@@ -1,0 +1,64 @@
+<h3>Loops and Basic Fucntions In Angular</h3>
+<p>Below is a example of For loop.</p>
+<table border="1">
+    <tbody>
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Bio</th>
+    </tr>
+
+    @for(data of dummyData; track data.id; let $i = $index){
+        <tr>
+            <td>{{$i+1}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.language}}</td>
+            <td>{{data.bio.length > 100 ? data.bio.slice(0, 100) + '...' : data.bio}}</td>
+        </tr>
+    }@empty {
+        <tr>
+            <td colspan="3">No record found.</td>
+        </tr>
+    }
+    </tbody>
+</table>
+<p>Below is a example of $index, $even, $odd, $first, $last and $count functions data differentiate in For loop.</p>
+
+<table border="1">
+    <tbody>
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Bio</th>
+    </tr>
+
+    
+    @for(data of dummyData; track data.id; let i = $index,e = $even,od = $odd,f=$first,l=$last,c = $count){
+        <tr> 
+            @if(f){
+                <td>First {{ od ? "Even" : 'Odd' }}</td>  <!-- first index is 0 and even and odd is starting counting from the 0 thats why I have used its opposite condition. -->
+            }@else if (l) {
+                <td>Last {{ od ? "Even" : 'Odd' }}</td>
+            }@else {
+                <td>{{i + 1}} {{ od ? "Even" : 'Odd' }}</td>
+            }
+            <td>{{data.name}}</td>
+            <td>{{data.language}}</td>
+            <td>{{data.bio.length > 100 ? data.bio.slice(0, 100) + '...' : data.bio}}</td>
+        </tr>
+
+        @if(l){
+            <tr>
+                <td colspan="3">Total Records</td>
+                <td >{{c}}</td>
+            </tr>
+        }
+    }@empty {
+        <tr>
+            <td colspan="3">No record found.</td>
+        </tr>
+    }
+    </tbody>
+</table>
