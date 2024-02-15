@@ -23,9 +23,73 @@
     <li>Two way Binding</li>
 </ul>
 
-<h3>Interpolation Binding</h3>
-<p>Interpolation Binding is a technique that allows the user to bind a value to a UI element. Interpolation Binds the data in One way Which is Component to View. This means that when the value of the field bound is changed, It update the page as well.</p>
-<p>{{counter}}</p>
+<!-- Interpolation Binding -->
+<div>
+    <h3>Interpolation Binding</h3>
+    <p>Interpolation Binding is a technique that allows the user to bind a value to a UI element. Interpolation Binds the data in One way Which is Component to View. This means that when the value of the field bound is changed, It update the page as well.</p>
+    <p>{{counter}}</p>
+    
+    <button (click)="IncreaseCounter()">Increase</button> 
+    <button (click)="decreaseCounter()">Decrease</button>
+</div>
 
-<button (click)="IncreaseCounter()">Increase</button> 
-<button (click)="decreaseCounter()">Decrease</button>
+<!-- Error Handling  -->
+<div>
+    <h3>Error Handling</h3>
+    <p>Error handling in Angular is refers to handle the empty values on the frontend. </p>
+    <p>Name: {{userData?.name}}</p>
+    <p>Age: {{userData?.age}}</p>
+</div>
+
+<!-- Atribute Binding -->
+<div>
+    <h3>Atribute Binding</h3>
+    <p>With attribute binding, we can set the value of an attribute directly. The thing to note is that you must use the attribute binding only when there is no element Property there to bind. Attribute Binding binds the data in One way Which is Component to View. Below is a example of attribute binding.</p>
+    
+    <button [attr.disabled]="isSubmitting">Submit</button>
+    
+    <p [class.active]="isActive">This is a paragraph.</p>
+</div>
+
+<!-- Property Binding -->
+<div>
+    <h3>Property Binding</h3>
+    <p>It is used to bind value of Component/model properties to the HTML element. Depending on the values, it will change the existing behavior of the HTML element. <b>Syntax [property]='expression'</b> In the property binding, there is a source and target. for example, we can define it as [innerHTML]='firstname'. Here, innerHTML is a target that is a property of span tag and source is a component property i.e. firstname. It is also a one way data binding.</p>
+    <p>We must always use property binding because Interpolation get fails when we work with boolean value.</p>
+    
+    <h4>Example of property Binding </h4>
+    <span [innerHTML]="pData"></span><br>
+    <img [src]="imgSrc" width="100px" alt="wallpaper" />
+    
+    <h4>Example of Interpolation Binding </h4>
+    <span innerHTML="{{pData}}"></span><br>
+    <img src="{{imgSrc}}" width="100px" alt="wallpaper" />
+    
+    <h4>Difference where Interpolation fails</h4>
+    <button (click)="ToggleBtn()">Toggle button Enable/Disable</button><br><br>
+    <button [disabled]="isSubmitting">property button</button>
+    
+    <button disabled="{{isSubmitting}}">interpolation button</button>
+</div>
+
+<!-- style binding -->
+<div>
+    <h3>Style Binding</h3>
+    <p>Style Binding is similar as property binding. It is very easy to give the CSS style to HTML elements using style binding in Angular 17. It is also One way Binding. We can set the inline styles of an HTML elements using the style binding in angular.</p>
+    <div [style]="{'background-color':dStyle.bg,'color':dStyle.color}">Style Binding element</div>
+    <p [style.color]="dStyle.color">example of style binding</p>
+    <p [style.color]="dStyle.color"  [style.color]="dStyle.bg" [style.font-size.px]="dStyle.font">if we will add the same style binding twice then the first one is replaced with the last. But if we are adding the different property with style bind then it will merge it with the previous property</p>
+</div>
+
+<!-- Class Binding -->
+<div>
+    <h3>Class Binding</h3>
+    <p>Class binding in Angular makes it very easy to set the class property of a view element. We can set or remove the Css Class names from an element's class attribute with the help of class binding. We bind a class of a DOM element to a field that is a defined property in our Typescript Code</p>
+    <p [class]="multipleClasses">Adding a Multiple classes dynamically</p>
+    <div [class]="['stroke', 'border']">This div has statically classes.</div>
+    <p [class]="isActive ? 'active' : ''">Adding a based on condition.</p>
+    <p [class.active]="isActive">Example 2 condition based class.</p>
+    <button [class]="{ 'selected': isSelected, 'disabled': isSubmitting }">Example 3 condition based class.</button>
+    <p class="border" [class]="eventclass">Adding a on button click</p>
+    <button (click)="toggleClass()">Toggle Class</button>
+</div>
