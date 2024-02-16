@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { FirstComponent } from './basic-concept/first/first.component';
 import { HostListenerComponent } from './basic-concept/host-listener/host-listener.component';
 import { BasicConceptComponent } from './basic-concept/basic-concept.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,BasicConceptComponent],
+  imports: [RouterOutlet,BasicConceptComponent,PipesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

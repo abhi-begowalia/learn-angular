@@ -1,0 +1,9 @@
+<h3>Two Way Data Binding </h3>
+<p>It is most used mechanism of data binding. Basically two way data binding is used mostly with input field or any form element where user type or provide any value or change any control value in one side, and on other side, the same automatically updated in to the controller variable and vice versa.</p>
+<p>In simple words, two way data binding is a combination of both Property Binding and Event Binding. It is used on that situation when we want to use the property binding and event binding on same element.</p>
+
+<p>{{message}}</p>
+
+<input type="text" #txtname [value]="message" (keyup)="onChange(txtname.value)" /> <!-- old way -->
+<br><br>
+<input type="text" [(ngModel)]="inp" /><!-- new way -->

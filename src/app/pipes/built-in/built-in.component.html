@@ -1,0 +1,41 @@
+<h3>Built In Pipes</h3>
+<p>Built is Pipes are those which are provided by the angular by default.</p>
+<ul>
+    <li>lowercase</li>
+    <li>uppercase</li>
+    <li>titlecase</li>
+    <li>slice</li>
+    <li>json</li>
+    <li>decimal</li>
+    <li>percent</li>
+    <li>currency</li>
+    <li>data</li>
+    <li>async</li>
+</ul>
+
+<p>{{'LOWERCASE' | lowercase}}</p>
+<p>{{'uppercase' | uppercase}}</p>
+<p>{{'tITLE CASE' | titlecase}}</p>
+<p>{{title | slice:2:10}}</p>
+<p>{{jsonData | json}}</p>
+<p>{{jsonData | json | uppercase}}</p> <!--it is called a chaining method -->
+
+<p>In the number pipe by default values are "minIntegerDigit = 1, minFractionDigit = 0, maxFractionDigit = 3"</p>
+
+syntax: minIntegerDigit . minFractionDigit - maxFractionDigit 
+<p>{{12.96862493 | number}}</p> <!-- default it takes 3 decimal number -->
+<p>{{10.96862493 | number:'1.2-5'}}</p>
+<!-- if i will given the 3 in the first it means that minimum 3 digit are require before the point value and if value is less then 3 digits then it will add the zero on the first  -->
+<p>{{10.96862493 | number:'3.0-3'}}</p> 
+
+<!-- if i will give the value 3.5 then it simple means => 35/10*100 and output will br 350% -->
+<p>{{ 3.5 | percent:'1.2-5' }}</p>
+
+ <p>{{564 | currency}}</p> <!--it will display the dollar sign by default  -->
+<p>{{564 | currency: 'INR'}}</p> 
+<p>{{564 | currency: 'GBP'}}</p>
+<!-- if i will add the false then it will showing the INR as a text  -->
+<p>{{564 | currency: 'INR':false}}</p>
+<!-- if i also want to add a fraction with currancy then I need to define franction parameter on third position -->
+<p>{{879.877 | currency:'INR':true:'1.2-4'}}</p>
+<p>syntax of currancy is "number_expression | currancy : currancyCode : symbolDisplay : digit and fraction info"</p>

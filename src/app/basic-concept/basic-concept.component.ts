@@ -9,11 +9,12 @@ import { ParentToChildComponent } from './parent-to-child/parent-to-child.compon
 import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
 
 @Component({
   selector: 'app-basic-concept',
   standalone: true,
-  imports: [FirstComponent,HostListenerComponent,SelectorComponent,PreWhiteSpaComponent,ViewProviderComponent,EncapsulationComponent,ParentToChildComponent,ChildToParentComponent,DirectiveComponent,DataBindingComponent],
+  imports: [FirstComponent,HostListenerComponent,SelectorComponent,PreWhiteSpaComponent,ViewProviderComponent,EncapsulationComponent,ParentToChildComponent,ChildToParentComponent,DirectiveComponent,DataBindingComponent,TwoWayDataBindingComponent],
   templateUrl: './basic-concept.component.html',
   styleUrl: './basic-concept.component.css'
 })
