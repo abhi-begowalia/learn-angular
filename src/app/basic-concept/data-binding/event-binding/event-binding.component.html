@@ -1,0 +1,32 @@
+<h3>Event Binding</h3>
+<p>When a user interacts with an application in the form of a keyboard movement, a mouse click, or a mouseover, it generates an event. These events need to be handled to perform some kind of action. This is where event binding comes into the picture. Event Binding is also one way binding. But in this bindind Data will be flow in View to component.</p>
+<b>(click)="onClick()"</b>
+<p>In this case, onClick() method of the component class is called when the click event occurs.</p>
+
+<button (click)="onClick()">Fire Click event</button>
+<button on-click="onClick()">Fire Click event</button> <!-- on-click is a canon call approach which is used eariler -->
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" required>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" required>
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" formControlName="age" required min="18">
+    </div>
+    <div>
+      <label for="phone">Phone number:</label>
+      <input type="tel" id="phone" formControlName="phone" required>
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  

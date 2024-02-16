@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @Component({
   selector: 'app-data-binding',
   standalone: true,
-  imports: [],
+  imports: [EventBindingComponent],
   templateUrl: './data-binding.component.html',
   styleUrl: './data-binding.component.css'
 })
