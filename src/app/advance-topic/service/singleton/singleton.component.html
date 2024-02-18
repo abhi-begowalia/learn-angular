@@ -1,0 +1,10 @@
+<h3>Singleton Service</h3>
+<p>A Singleton Service in the context of Angular refers to a service instance that is created and managed as a single, shared instance throughout the entire application. In other words, Angular ensures that there is only one instance of the service created, and that same instance is used whenever the service is injected into any component, directive, or another service within the application.</p>
+
+<p>The providedIn: 'root' metadata in the &#64;Injectable decorator is a shorthand in Angular to define a singleton service. When a service is provided in the root module using this syntax, Angular creates a single instance of that service, and this instance is shared across the entire application.</p>
+
+<p>for example: In the below I'm creating a example where i am using a single service in two different components and If I will adding the new elements from a component 1 then you can able to see in the second component it will be added automaticallyt that is the actual concept of singleton service.</p>
+
+<app-comp-one></app-comp-one>
+
+<app-comp-two></app-comp-two>

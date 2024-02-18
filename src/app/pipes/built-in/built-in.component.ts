@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class BuiltInComponent {
   title = "Example of Pipes";
+  todayDate = new Date();
   jsonData = {
     "name":"abhi",
     "age":24

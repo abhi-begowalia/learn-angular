@@ -1,0 +1,7 @@
+.width-50{
+    width:49%;
+    display: inline-block;
+}
+.width-50.first{
+    border-right: 1px solid;
+}

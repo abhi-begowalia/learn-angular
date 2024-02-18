@@ -1,0 +1,10 @@
+<div class="width-50">
+    <h4>Component Two</h4>
+    Enter Number: <input type="number" #numItem />
+    <button (click)="addNumber(numItem.value)">Add Number</button>
+    <ul>
+        @for(item of dataList; track item){
+            <li>{{item}}</li>
+        }
+    </ul>
+</div>

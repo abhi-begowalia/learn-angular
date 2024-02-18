@@ -1,0 +1,31 @@
+<h3>Services in Angular</h3>
+
+<p>Services allow your code to share common functionality across the application. Create a single reusable service and inject it into the components that need it, which makes your code clean. Services are an abstraction layer that handles an application's business logic, which usually includes communicating with a backend and parsing/returning data or datasets.</p>
+<p>A angular service is simply a Javascript functinon, including its related properties and methonds which can perform a partcular task a group of tasks. Actually, service is a mechanism to use shared responsibities within one or multiple components.</p>
+
+<p>Below I have create a example of Todo Service which include the crud option on the Todo.</p>
+
+<div class="todo-box">
+    <h4>My Todo List</h4>
+    <div class="add-todo-box">
+        <input type="text" #todoName (keyup)="newTodoItem(todoName.value)" />
+        <button (click)="addTodoItem(newTodo)">Add Todo</button>
+    </div>
+    @if(todos.length > 0){
+        <button class="clear-all" (click)="clearItems()">Clear all</button>        
+    }
+    @for(todo of todos;track todo;let i = $index){
+        <div class="todo-item">
+            <span>{{todo}}</span>
+            <button class="delete-button" (click)="deleteTodo(i)">Delete</button>
+        </div>
+    }
+</div>
+
+<h3>Injectable Decorator</h3>
+<p>The &#64;Injectable() Decorator is needed when a Service needs dependenices Injectable to its constructor. Although it is optional when a service doesn't need dependenices Injectable into it, a common practice is use the Injectable() Decoratorfor all the services for consistency so that when a service requires dependenices in the future you don't have to worry about remembering to add the decorator.</p>
+<p>Mainly it is require to use &#64;Injectable() on the Nesting services. because if the service is not Injectable then one service doesn't allow you is Inject the another service on it.</p>
+
+<app-singleton></app-singleton>
+
+<app-multiple></app-multiple>

@@ -24,7 +24,7 @@
 
 syntax: minIntegerDigit . minFractionDigit - maxFractionDigit 
 <p>{{12.96862493 | number}}</p> <!-- default it takes 3 decimal number -->
-<p>{{10.96862493 | number:'1.2-5'}}</p>
+<p>{{10.96862493 | number:'1.2-5'}}</p> <!-- it is parametrised pipe  -->
 <!-- if i will given the 3 in the first it means that minimum 3 digit are require before the point value and if value is less then 3 digits then it will add the zero on the first  -->
 <p>{{10.96862493 | number:'3.0-3'}}</p> 
 
@@ -32,10 +32,17 @@ syntax: minIntegerDigit . minFractionDigit - maxFractionDigit
 <p>{{ 3.5 | percent:'1.2-5' }}</p>
 
  <p>{{564 | currency}}</p> <!--it will display the dollar sign by default  -->
-<p>{{564 | currency: 'INR'}}</p> 
-<p>{{564 | currency: 'GBP'}}</p>
+<p>{{564 | currency: 'INR'}}</p> <!-- it is parametrised pipe  -->
+<p>{{564 | currency: 'GBP'}}</p> <!-- it is parametrised pipe  -->
 <!-- if i will add the false then it will showing the INR as a text  -->
 <p>{{564 | currency: 'INR':false}}</p>
 <!-- if i also want to add a fraction with currancy then I need to define franction parameter on third position -->
 <p>{{879.877 | currency:'INR':true:'1.2-4'}}</p>
 <p>syntax of currancy is "number_expression | currancy : currancyCode : symbolDisplay : digit and fraction info"</p>
+
+<p>Normal Date: {{todayDate | date}}</p>
+<p>Short Date: {{todayDate | date:'shortDate'}}</p>
+<p>long Date: {{todayDate | date:'longDate'}}</p> <!-- all these date is parametrised pipe  -->
+<p>Full Date: {{todayDate | date:'fullDate'}}</p>
+<p>Custom Date: {{todayDate | date:'dd-MM-YYYY'}}</p>
+<p>Custom Date: {{todayDate | date:'d-M-YY hh:mm '}}</p>
