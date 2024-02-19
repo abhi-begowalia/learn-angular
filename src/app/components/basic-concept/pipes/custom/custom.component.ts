@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { PrefixPostfixPipe } from '../../custom-pipes/prefix-postfix.pipe';
+import { PrefixPostfixPipe } from '../../../../custom-pipes/prefix-postfix.pipe';
+
 
 @Component({
   selector: 'app-custom',

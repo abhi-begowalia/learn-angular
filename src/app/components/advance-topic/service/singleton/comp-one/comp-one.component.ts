@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
-import { MultipleService } from '../../../../services/multiple/multiple.service';
+import { SingletonService } from '../../../../../services/singleton/singleton.service';
+
 
 @Component({
   selector: 'app-comp-one',
   standalone: true,
   imports: [],
   templateUrl: './comp-one.component.html',
-  styleUrl: './comp-one.component.css',
-  providers:[MultipleService]
+  styleUrl: './comp-one.component.css'
 })
 export class CompOneComponent {
   dataList:any;
 
-  constructor(private multipleService:MultipleService){
+  constructor(private singletonService:SingletonService){
     this.getItems();
   }
 
   addNumber(val:any){
     if(val != null){
-      this.multipleService.addNumber(val);   
+      this.singletonService.addNumber(val);   
       this.getItems();
     }
   }
 
   getItems(){
-    this.dataList = this.multipleService.getList();
+    this.dataList = this.singletonService.getList();
   }
 }

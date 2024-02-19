@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FirstComponent } from './basic-concept/first/first.component';
-import { HostListenerComponent } from './basic-concept/host-listener/host-listener.component';
-import { BasicConceptComponent } from './basic-concept/basic-concept.component';
-import { PipesComponent } from './pipes/pipes.component';
-import { AdvanceTopicComponent } from './advance-topic/advance-topic.component';
+import { AdvanceTopicComponent } from './components/advance-topic/advance-topic.component';
+import { BasicConceptComponent } from './components/basic-concept/basic-concept.component';
+import { PipesComponent } from './components/basic-concept/pipes/pipes.component';
+
 
 @Component({
   selector: 'app-root',

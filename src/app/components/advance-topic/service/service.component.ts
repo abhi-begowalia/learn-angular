@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TodoService } from '../../services/todo/todo.service';
 import { SingletonComponent } from './singleton/singleton.component';
 import { MultipleComponent } from './multiple/multiple.component';
+import { TodoService } from '../../../services/todo/todo.service';
 
 @Component({
   selector: 'app-service',

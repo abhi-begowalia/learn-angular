@@ -30,14 +30,13 @@ syntax: minIntegerDigit . minFractionDigit - maxFractionDigit
 
 <!-- if i will give the value 3.5 then it simple means => 35/10*100 and output will br 350% -->
 <p>{{ 3.5 | percent:'1.2-5' }}</p>
-
- <p>{{564 | currency}}</p> <!--it will display the dollar sign by default  -->
+<p>{{564 | currency}}</p> <!--it will display the dollar sign by default  -->
 <p>{{564 | currency: 'INR'}}</p> <!-- it is parametrised pipe  -->
 <p>{{564 | currency: 'GBP'}}</p> <!-- it is parametrised pipe  -->
 <!-- if i will add the false then it will showing the INR as a text  -->
-<p>{{564 | currency: 'INR':false}}</p>
+<p>{{564 | currency: 'INR':'false'}}</p>
 <!-- if i also want to add a fraction with currancy then I need to define franction parameter on third position -->
-<p>{{879.877 | currency:'INR':true:'1.2-4'}}</p>
+<p>{{879.877 | currency:'INR':'true':'1.2-4'}}</p>
 <p>syntax of currancy is "number_expression | currancy : currancyCode : symbolDisplay : digit and fraction info"</p>
 
 <p>Normal Date: {{todayDate | date}}</p>
