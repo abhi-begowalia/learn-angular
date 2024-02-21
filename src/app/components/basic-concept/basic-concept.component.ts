@@ -1,24 +1,30 @@
 import { Component } from '@angular/core';
-import { FirstComponent } from './first/first.component';
-import { HostListenerComponent } from './host-listener/host-listener.component';
-import { SelectorComponent } from './selector/selector.component';
-import { PreWhiteSpaComponent } from './pre-white-spa/pre-white-spa.component';
-import { ViewProviderComponent } from './view-provider/view-provider.component';
-import { EncapsulationComponent } from './encapsulation/encapsulation.component';
-import { ParentToChildComponent } from './parent-to-child/parent-to-child.component';
-import { ChildToParentComponent } from './child-to-parent/child-to-parent.component';
-import { DirectiveComponent } from './directive/directive.component';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
-import { PipesComponent } from './pipes/pipes.component';
+import { RouterModule,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-basic-concept',
   standalone: true,
-  imports: [FirstComponent,HostListenerComponent,SelectorComponent,PreWhiteSpaComponent,ViewProviderComponent,EncapsulationComponent,ParentToChildComponent,ChildToParentComponent,DirectiveComponent,DataBindingComponent,TwoWayDataBindingComponent,PipesComponent],
+  imports: [RouterModule],
   templateUrl: './basic-concept.component.html',
   styleUrl: './basic-concept.component.css'
 })
 export class BasicConceptComponent {
+  constructor(public route: ActivatedRoute) {}
+  isActive(path: string): boolean {
+    return this.route.snapshot.url[0]?.path === path;
+  }
 
+  routes = [
+    { path: 'host-listener', label: 'Host Listener' },
+    { path: 'selector', label: 'Selector' },
+    { path: 'pre-white-spa', label: 'Pre White Space' },
+    { path: 'view-provider', label: 'View Provider' },
+    { path: 'encapsulation', label: 'Encapsulation' },
+    { path: 'parent-to-child', label: 'Parent to Child' },
+    { path: 'child-to-parent', label: 'Child to Parent' },
+    { path: 'directive', label: 'Directive' },
+    { path: 'data-binding', label: 'Data Binding' },
+    { path: 'two-way-data-binding', label: 'Two way Binding' },
+    { path: 'pipes', label: 'Pipes' }
+  ];
 }
