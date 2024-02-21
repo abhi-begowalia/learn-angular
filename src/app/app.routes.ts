@@ -17,6 +17,18 @@ import { PipesComponent } from './components/basic-concept/pipes/pipes.component
 import { ServiceComponent } from './components/advance-topic/service/service.component';
 import { RoutingComponent } from './components/advance-topic/routing/routing.component';
 import { HooksComponent } from './components/advance-topic/hooks/hooks.component';
+import { StructuralComponent } from './components/basic-concept/directive/structural/structural.component';
+import { AttributeComponent } from './components/basic-concept/directive/attribute/attribute.component';
+import { DynamicComponent } from './components/advance-topic/routing/dynamic/dynamic.component';
+import { AuxiliaryComponent } from './components/advance-topic/routing/auxiliary/auxiliary.component';
+import { BasicComponent } from './components/advance-topic/routing/basic/basic.component';
+import { NgOnChangesComponent } from './components/advance-topic/hooks/ng-on-changes/ng-on-changes.component';
+import { NgAfterViewInitComponent } from './components/advance-topic/hooks/ng-after-view-init/ng-after-view-init.component';
+import { NgOnInitComponent } from './components/advance-topic/hooks/ng-on-init/ng-on-init.component';
+import { NgAfterViewCheckedComponent } from './components/advance-topic/hooks/ng-after-view-checked/ng-after-view-checked.component';
+import { NgAfterContentInitComponent } from './components/advance-topic/hooks/ng-after-content-init/ng-after-content-init.component';
+import { NgAfterContentCheckedComponent } from './components/advance-topic/hooks/ng-after-content-checked/ng-after-content-checked.component';
+import { NgOnDestroyComponent } from './components/advance-topic/hooks/ng-on-destroy/ng-on-destroy.component';
 
 
 
@@ -39,59 +51,71 @@ export const routes: Routes = [
         title:"Angular Basic Concept", //title property is used to update the title of the webpage in the brower 
         children: [
             {
-                path: "host-listener", // Use to define the path if empty then it means main/home url
-                component:HostListenerComponent, //define the which component is load on the defined path
-                title:"Host Listener" //title property is used to update the title of the webpage in the brower 
+                path: "host-listener", 
+                component:HostListenerComponent, 
+                title:"Host Listener"  
             },
             {
-                path: "selector", // Use to define the path if empty then it means main/home url
-                component:SelectorComponent, //define the which component is load on the defined path
-                title:"Angular Selector" //title property is used to update the title of the webpage in the brower 
+                path: "selector", 
+                component:SelectorComponent, 
+                title:"Angular Selector"  
             },
             {
-                path: "pre-white-spa", // Use to define the path if empty then it means main/home url
-                component:PreWhiteSpaComponent, //define the which component is load on the defined path
-                title:"Preserve White Space" //title property is used to update the title of the webpage in the brower 
+                path: "pre-white-spa", 
+                component:PreWhiteSpaComponent, 
+                title:"Preserve White Space"  
             },
             {
-                path: "view-provider", // Use to define the path if empty then it means main/home url
-                component:ViewProviderComponent, //define the which component is load on the defined path
-                title:"View Provider" //title property is used to update the title of the webpage in the brower 
+                path: "view-provider", 
+                component:ViewProviderComponent, 
+                title:"View Provider"  
             },
             {
-                path: "encapsulation", // Use to define the path if empty then it means main/home url
-                component:EncapsulationComponent, //define the which component is load on the defined path
-                title:"Encapsilation" //title property is used to update the title of the webpage in the brower 
+                path: "encapsulation", 
+                component:EncapsulationComponent, 
+                title:"Encapsilation"  
             },
             {
-                path: "parent-to-child", // Use to define the path if empty then it means main/home url
-                component:ParentToChildComponent, //define the which component is load on the defined path
-                title:"Parent To Child" //title property is used to update the title of the webpage in the brower 
+                path: "parent-to-child", 
+                component:ParentToChildComponent, 
+                title:"Parent To Child"  
             },
             {
-                path: "child-to-parent", // Use to define the path if empty then it means main/home url
-                component:ChildToParentComponent, //define the which component is load on the defined path
-                title:"Send Data Child to Parent" //title property is used to update the title of the webpage in the brower 
+                path: "child-to-parent", 
+                component:ChildToParentComponent, 
+                title:"Send Data Child to Parent"  
             },
             {
-                path: "directive", // Use to define the path if empty then it means main/home url
-                component:DirectiveComponent, //define the which component is load on the defined path
-                title:"Directive" //title property is used to update the title of the webpage in the brower 
+                path: "directive", 
+                component:DirectiveComponent, 
+                title:"Directive",  
+                children:[
+                    {
+                        path:"structural-directive",
+                        component:StructuralComponent,
+                        title:"Structural Directive"
+                    },
+                    {
+                        path:"attribute-directive",
+                        component:AttributeComponent,
+                        title:"Attribute Directive"
+                    }
+                ]
             },
             {
-                path: "data-binding", // Use to define the path if empty then it means main/home url
-                component:DataBindingComponent, //define the which component is load on the defined path
-                title:"Data Binding" //title property is used to update the title of the webpage in the brower 
+                path: "data-binding", 
+                component:DataBindingComponent, 
+                title:"Data Binding"  
             },
             {
-                path: "two-way-data-binding", // Use to define the path if empty then it means main/home url
-                component:TwoWayDataBindingComponent, //define the which component is load on the defined path
-                title:"Two Way Data Binding" //title property is used to update the title of the webpage in the brower 
+                path: "two-way-data-binding", 
+                component:TwoWayDataBindingComponent, 
+                title:"Two Way Data Binding"  
             },
             {
-                path: "pipes", // Use to define the path if empty then it means main/home url
-                component:PipesComponent, //define the which component is load on the defined path
-                title:"Pipes" //title property is used to update the title of the webpage in the brower 
+                path: "pipes", 
+                component:PipesComponent, 
+                title:"Pipes"  
             }
         ]
     },
@@ -106,19 +130,74 @@ export const routes: Routes = [
         title:"Angular Advance Concept",
         children: [
             {
-                path: "services", // Use to define the path if empty then it means main/home url
-                component:ServiceComponent, //define the which component is load on the defined path
-                title:"Angular Service" //title property is used to update the title of the webpage in the brower 
+                path: "services", 
+                component:ServiceComponent, 
+                title:"Angular Service"  
             },
             {
-                path: "routing", // Use to define the path if empty then it means main/home url
-                component:RoutingComponent, //define the which component is load on the defined path
-                title:"Angular Routing" //title property is used to update the title of the webpage in the brower 
+                path: "routing", 
+                component:RoutingComponent, 
+                title:"Angular Routing",
+                children:[
+                    {
+                        path:"basic",
+                        component:BasicComponent,
+                        title:"Basic Routing"
+                    },
+                    {
+                        path:"dynamic",
+                        component:DynamicComponent,
+                        title:"Dynamic Routing"
+                    },
+                    {
+                        path:"auxiliary",
+                        component:AuxiliaryComponent,
+                        title:"Auxiliary Routing"
+                    }
+                ]
             },
             {
-                path: "hooks", // Use to define the path if empty then it means main/home url
-                component:HooksComponent, //define the which component is load on the defined path
-                title:"Lifecycle Hooks" //title property is used to update the title of the webpage in the brower 
+                path: "hooks", 
+                component:HooksComponent, 
+                title:"Lifecycle Hooks" ,
+                children:[
+                    {
+                        path: 'ng-on-changes',
+                        component: NgOnChangesComponent,
+                        title: 'NgOnChanges'
+                    },
+                    {
+                        path: 'ng-on-init',
+                        component: NgOnInitComponent,
+                        title: 'NgOnInit'
+                    },
+                    {
+                        path: 'ng-after-view-init',
+                        component: NgAfterViewInitComponent,
+                        title: 'NgAfterViewInit'
+                    },
+                    {
+                        path: 'ng-after-view-checked',
+                        component: NgAfterViewCheckedComponent,
+                        title: 'NgAfterViewChecked'
+                    },
+                    {
+                        path: 'ng-after-content-init',
+                        component: NgAfterContentInitComponent,
+                        title: 'NgAfterContentInit'
+                    },
+                    {
+                        path: 'ng-after-content-checked',
+                        component: NgAfterContentCheckedComponent,
+                        title: 'NgAfterContentChecked'
+                    },
+                    {
+                        path: 'ng-on-destroy',
+                        component: NgOnDestroyComponent,
+                        title: 'NgOnDestroy'
+                    }
+                      
+                ]
             }
         ]
     },

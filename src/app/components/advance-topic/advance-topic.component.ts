@@ -17,7 +17,7 @@ export class AdvanceTopicComponent {
 
   routes = [
     { path: 'services', label: 'Service' },
-    { path: 'routing', label: 'Angular Routing' },
+    { path: 'routing/basic', label: 'Angular Routing' },
     { path: 'hooks', label: 'Lifecycle Hooks' },
   ];
 }

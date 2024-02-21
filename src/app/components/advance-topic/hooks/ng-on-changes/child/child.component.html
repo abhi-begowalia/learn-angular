@@ -1,0 +1,5 @@
+@if (successMessage) {
+	<ngb-alert #selfClosingAlert type="success" (closed)="successMessage = ''">{{ successMessage }}</ngb-alert>
+}
+
+<p>Data from Parent: {{data}}</p>

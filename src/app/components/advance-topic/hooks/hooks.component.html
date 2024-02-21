@@ -11,4 +11,18 @@
     <li>ngOnDestroy</li>
 </ul>
 
-<h4>ngOnInit</h4>
+<div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+    <ng-container>
+        @for(link of routes;track link.path){
+            <a
+            class="p-2 text-decoration-none"
+            [routerLink]="[link.path]"
+            [routerLinkActive]="['bg-dark','text-light']"
+        >
+            {{ link.label }}
+        </a>
+        }
+    </ng-container>
+</div>
+
+<router-outlet></router-outlet>

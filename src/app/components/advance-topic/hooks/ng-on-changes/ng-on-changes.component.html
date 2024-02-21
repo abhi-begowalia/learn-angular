@@ -1,0 +1,10 @@
+<p><b class="fs-5">ngOnChanges:</b> The ngOnChanges hook is used to detect the changes. For example if you have a variable in the parent component and you are using its values in the child component. variable will automatically detect the changes and update the value. But If you want to perform a any specific action on value changes then you can use the ngOnChanges hook. Whenever anything will be changed it will automatically call.</p>
+<p>Below is example of the ngOnChange Property. I have added the alert message on the change of the value.</p>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">New Message</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" #newMessage placeholder="Enter New Message">
+</div>
+
+<button (click)="ChangeData(newMessage.value)">Change Data</button>
+<app-child data="{{message}}"></app-child>

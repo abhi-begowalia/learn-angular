@@ -11,4 +11,7 @@ import { ClassSelectorComponent } from './class-selector/class-selector.componen
 })
 export class SelectorComponent {
 
+  elementSelector = "Example: <app-component></app-component> where app-component is an element selector.";
+  classSelector = "Example: <div class='app-component'></div> where .app-component is a class selector.";
+  attributeSelector = "Example: <div app-attribute-selector></div> here app-attribute-selector is attribute selector";
 }

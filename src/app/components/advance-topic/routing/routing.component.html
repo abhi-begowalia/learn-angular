@@ -1,31 +1,17 @@
-<h3>Routing in Angular</h3>
-<p>Routing is a mechanism used by angular for navigating between page and displaying appropriated component/page on brower. Angular framework is mainly focused and good for the SPA (Single Page Architecture). It loads a single full HTML page and dynamically loads or updated the partial pages as per user request and that is achieved with the help of Router. Angular Routing helps navigation across the application from one view to another view. It also allow us to maintian the state, implemented modules and loads the modules based on the role of the user.</p>
+<h3 class="text-center my-3">Routing in Angular</h3>
 
-<p>When a user navigates to a page, Angular Router performs the following steps in order: Every time a link is clicked or the browser URL changes, Angular router makes sure your application reacts accordingly.</p>
-<p>To accomplish that, Angular router performs the following 7 steps in order:</p>
-<ul>
-    <li>Parse the URL: Angular router takes the browser URL and parses it as a URL tree. This three is used in Step 3 
-        <ul>
-            <li>/ - slashes divide URL segments</li>
-            <li>() - parentheses specify secondary routes</li>
-            <li>: - a colon specifies a named router outlet.</li>
-            <li>; - a semicolon specifies a matrix parameter</li>
-            <li>? - a question maek separates the query string parameters</li>
-            <li># - a hashtag specifies the fragment</li>
-            <li>// - a double slash separates multiple secondary routes.</li>
-        </ul>
-    </li>
-    <li>Redirect: it checks to see if any redirects should be applied.</li>
-    <li>Identify the router state</li>
-    <li>Run Guard</li>
-    <li>Run Resolver: it resolves the required data for the router state.</li>
-    <li>Activate; It activates the nagular components to display the page.</li>
-    <li>Manage: when the new router state has been displayed to the screen. Angular router listen for URL changes and state changes.</li>
-</ul>
+<div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+    <ng-container>
+        @for(link of routes;track link.path){
+            <a
+            class="p-2 text-decoration-none"
+            [routerLink]="[link.path]"
+            [routerLinkActive]="['bg-dark','text-light']"
+        >
+            {{ link.label }}
+        </a>
+        }
+    </ng-container>
+</div>
 
-<p><b>Route Configuration</b></p>
-
-<p>To Configuration of Routes you can able to the app.routes.ts file in your project. in the routes variable you need to define the route path and component paramentes in a object patteren. There are many other parameter like title, redirectTo, children etc. You can also use it as your requirement. After that you need to add the router-outlet tag on the app.component.html file so that it will redering the components as per you defined the components in the routes page.</p>
-<p>to navigate to the another page you must need to use a <b>routerLink</b> parameter in your anchor tag and not use the href tag.</p>
-
-<p><b>Wildcard route:</b> This is one of the type of route which is used on prevent the errors which is coming on that time when user tried to reach out that route which is not exist. So on that time you have two option one is show the 404 page and another is redirect the route to another route. You will must define this route at the end of the all routes because all the below route of this route is not working. In the path of this route you need to defin the double ** in the path parameter. </p>
+<router-outlet></router-outlet>
