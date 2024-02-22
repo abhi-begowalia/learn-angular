@@ -1,0 +1,11 @@
+<div class="border-bottom mb-2">
+    ID : {{user?.id}} <br>
+    Name: {{user?.name}} <br>
+    Email: {{user?.email}}
+</div>
+
+<p class="my-2">Suggest Username: {{username}}</p>
+
+@for(log of changeLog;track log){
+	<p>{{log}}</p>
+}

@@ -2,13 +2,6 @@
 
 <p>Below is example of the ngDoCheck Property. </p>
 
-<div>
-    ID : {{user.id}} <br>
-    Name: {{user.name}} <br>
-    Email: {{user.email}}
-</div>
+<input type="text" #name (keyup.enter)="setName(name.value)" />
 
-
-@for(log of changeLog;track log){
-	<p>{{log}}</p>
-}
+<app-user [user]="user"></app-user>
