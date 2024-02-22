@@ -12,6 +12,7 @@ export class HooksComponent {
   routes = [
     { path: 'ng-on-changes', label: 'NgOnChanges' },
     { path: 'ng-on-init', label: 'NgOnInit' },
+    { path: 'ng-do-check', label: 'NgDoCheck' },
     { path: 'ng-after-view-init', label: 'NgAfterViewInit' },
     { path: 'ng-after-view-checked', label: 'NgAfterViewChecked' },
     { path: 'ng-after-content-init', label: 'NgAfterContentInit' },

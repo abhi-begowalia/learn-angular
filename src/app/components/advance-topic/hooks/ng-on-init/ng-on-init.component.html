@@ -1,1 +1,12 @@
-<p>ng-on-init works!</p>
+<p><b class="fs-5">ngOnInit:</b> ngOnInit in Angular is a lifecycle hook that allows you to perform initialization tasks in a component. It is called after Angular has initialized the data-bound properties of the component but before the component's view is rendered. Developers commonly use ngOnInit to set up the initial state of the component, fetch data from a service, or perform other one-time setup actions. It will call after the ngOnChange hook and only calls once when component is created but not rendered. Meaning your html and css in not rendered yet. It is perfect places to fetch the data from the backend which you need only once when component is rendered.</p>
+
+<p>Below is example of the ngOnInit Property. You will able to see the ngOnInit Will be printed or called only once but on Value change. it will not called again.</p>
+
+<button (click)="updateValue()">Update Value</button><br><br>
+
+<p>Value of after Init => {{message}}</p>
+
+
+@for(log of changeLog;track log){
+	<p>{{log}}</p>
+}

@@ -1,5 +1,10 @@
-@if (successMessage) {
-	<ngb-alert #selfClosingAlert type="success" (closed)="successMessage = ''">{{ successMessage }}</ngb-alert>
+@if(showAlert){
+	<ngb-alert  [dismissible]="false">
+		Something has changed.
+	  </ngb-alert>
 }
 
+@for(log of changeLog;track log){
+	<p>{{log}}</p>
+}
 <p>Data from Parent: {{data}}</p>

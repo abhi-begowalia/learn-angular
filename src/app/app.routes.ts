@@ -29,6 +29,7 @@ import { NgAfterViewCheckedComponent } from './components/advance-topic/hooks/ng
 import { NgAfterContentInitComponent } from './components/advance-topic/hooks/ng-after-content-init/ng-after-content-init.component';
 import { NgAfterContentCheckedComponent } from './components/advance-topic/hooks/ng-after-content-checked/ng-after-content-checked.component';
 import { NgOnDestroyComponent } from './components/advance-topic/hooks/ng-on-destroy/ng-on-destroy.component';
+import { NgDoCheckComponent } from './components/advance-topic/hooks/ng-do-check/ng-do-check.component';
 
 
 
@@ -175,6 +176,11 @@ export const routes: Routes = [
                         path: 'ng-after-view-init',
                         component: NgAfterViewInitComponent,
                         title: 'NgAfterViewInit'
+                    },
+                    {
+                        path: 'ng-do-check',
+                        component: NgDoCheckComponent,
+                        title: 'NgDoCheck'
                     },
                     {
                         path: 'ng-after-view-checked',

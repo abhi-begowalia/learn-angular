@@ -1,16 +1,20 @@
-import { Component, OnChanges, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-on-init',
+  selector: 'app-ng-do-check',
   standalone: true,
   imports: [],
-  templateUrl: './ng-on-init.component.html',
-  styleUrl: './ng-on-init.component.css'
+  templateUrl: './ng-do-check.component.html',
+  styleUrl: './ng-do-check.component.css'
 })
-export class NgOnInitComponent implements OnInit, OnChanges  {
-
+export class NgDoCheckComponent implements OnChanges, DoCheck {
+  
   public changeLog:string[] = [];
-  message:string = '';
+  user = {
+    id:1,
+    name:"abhisheak",
+    email:"abhi@gmail.com"
+  }
 
   ngOnChanges(changes: SimpleChanges): void { // it will call always when values will be changes
     for(const propName in changes){
@@ -24,14 +28,7 @@ export class NgOnInitComponent implements OnInit, OnChanges  {
     } 
   }
 
-  ngOnInit(): void { // it will call only once
-    this.message = "Component Initilized";
-    this.changeLog.push('NgOnInit Called.')
+  ngDoCheck(): void {
+   
   }
-
-  updateValue(){
-    this.message = "Component Updated";
-    this.changeLog.push('Message Updated through NgOnChange.');
-  }
-
 }
