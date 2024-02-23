@@ -1,0 +1,10 @@
+<article class="upload-container">
+    <section class="input-container" (click)="openFileDialog()">
+        <ng-content></ng-content>
+        @if (previewSrc) {
+            <img [src]="previewSrc" />
+        }
+    </section>
+
+    <h3>Image</h3>
+</article>

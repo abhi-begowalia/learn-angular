@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-ng-after-view-init',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './ng-after-view-init.component.html',
   styleUrl: './ng-after-view-init.component.css'
 })
-export class NgAfterViewInitComponent {
+export class NgAfterViewInitComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    
+  }
 
 }

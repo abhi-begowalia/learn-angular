@@ -2,6 +2,10 @@
 
 <p>Below is example of the ngDoCheck Property. </p>
 
-<input type="text" #name (keyup.enter)="setName(name.value)" />
+<input type="text" #name (keyup.enter)="setName(name.value)" /> press enter after write
+
+<button class="btn btn-primary ms-3" (click)="changeFull()">change Full object</button>
 
 <app-user [user]="user"></app-user>
+
+<p>In the Above example you can able to see that ngOnChange doesn't detect the change in particular param. It will only detect whole variable/element change only. So to resolve this issue we are using the ngDoCheck hook which will called on every change.</p>

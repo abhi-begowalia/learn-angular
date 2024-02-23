@@ -19,4 +19,12 @@ export class NgDoCheckComponent {
   setName(name:string){
     this.user.name = name;
   }
+
+  changeFull(){
+    this.user = {
+      id:2,
+      name:"rahul",
+      email:"rahul@gmail.com"
+    }
+  }
 }

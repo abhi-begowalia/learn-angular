@@ -1,1 +1,7 @@
-<p>ng-after-content-init works!</p>
+<p><b class="fs-5">ngAfterViewInit:</b> ngAfterViewInit is called after ngDoCheck Hook. It is called after the component's content, projected content (content children), and content queries have been initialized. It signals that the component's content, which includes any projected content from its parent component, is now available for interaction. In simpler terms, ngAfterContentInit provides a hook for executing code after the component's content has been initialized. This is useful when you need to perform operations that depend on the presence of projected content or when you want to interact with the content of the component.</p>
+
+<p>Below is example of the ngAfterViewInit Property. </p>
+
+<app-file-input>
+    <input type="file" #fileItem />
+</app-file-input>
